@@ -3,7 +3,7 @@
 # Run some testers
 
 # Run java statistics
-nohup cd statistics-tester-java; ./java_nonce_create.sh 2 1000 &
+nohup ./statistics-tester-java/java_nonce_create.sh 2 1000 &
 
 # Run scala boom
 nohup java -agentlib:TakipiAgent -jar scala-boom.jar &
