@@ -6,5 +6,5 @@
 nohup ./statistics-tester-java/java_nonce_create.sh 2 1000 &
 
 # Run scala boom
-nohup java -agentlib:TakipiAgent -jar scala-boom.jar &
+java -agentlib:TakipiAgent -jar scala-boom.jar 
 
