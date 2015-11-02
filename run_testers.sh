@@ -4,15 +4,15 @@
 
 
 # Run java statistics
-nohup ./statistics-tester-java/java_nonce_create.sh 2 1000 &
+nohup /opt/statistics-tester-java/java_nonce_create.sh 2 1000 &
 
 # Run scala boom
-nohup java -agentlib:TakipiAgent -jar scala-boom.jar & 
+nohup cd /opt ; java -agentlib:TakipiAgent -jar scala-boom.jar & 
 
 # Run Tomcat Embedded
 export MAVEN_OTS="-agentlib:TakipiAgent"
-cd hod-embedded ; mvn compile package
-nohup cd hod-embedded ;mvn tomcat7:run &
+cd /opt/hod-embedded ; mvn compile package
+nohup cd /opt/hod-embedded ;mvn tomcat7:run &
 
 sleep 5 
 
